@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+    background-color: #091a23;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgb(230, 230, 230);/* rgb(22, 51, 65); */
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 2px solid #091a23;
+}
+
+nav {
+    background-color: rgb(230, 230, 230);
+    padding: 1rem;
+}
+
+footer {
+    background-color: rgb(230, 230, 230);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    padding: 1rem;
+    width: 200px;
+    background-color: rgb(255, 68, 56);
+}
+
+aside p {
+    font-size: small;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+    color: rgb(230, 230, 230);
+}
+
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="number"] {
+    height: 20px;
+    width: 40px;
+}
+
+input[type="submit"] {
+    height: 30px;
+    width: 60px;
+}
+
+input[type="text"], input[type="password"] {
+    height: 30px;
+    width: 250px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    color: rgb(230, 230, 230);
+    font-size: 16px;
+}
+
+input[type="text"].short {
+    width: 50px;
+}
+
+input::placeholder {
+    color: rgb(230, 230, 230);
+    font-size: 16px;
+}
+
+select {
+    height: 25px;
+    width: 100px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h4, label, p {
+    font-size: 16px;
+}
+
+.flex2 {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 15px;
+}
+

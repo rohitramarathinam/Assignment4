@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookings>
+    <booking>
+        <hotel-id>HCA03</hotel-id>
+        <hotel-name>LA Luxury Stay</hotel-name>
+        <city>Los Angeles, CA</city>
+        <check-in>2024-09-08</check-in>
+        <check-out>2024-10-01</check-out>
+        <guests>
+            <adults>2</adults>
+            <children>0</children>
+            <infants>0</infants>
+        </guests>
+        <rooms>1</rooms>
+        <price-per-night>225</price-per-night>
+        <total-price>5175</total-price>
+    </booking>
+</bookings>

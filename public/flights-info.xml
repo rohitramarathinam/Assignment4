@@ -1,0 +1,1983 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flights>
+  <flight>
+    <flight-id>CATX01</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-09-01</departure-date>
+    <departure-time>09:00</departure-time>
+    <arrival-date>2024-09-01</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>300.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX02</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-09-15</departure-date>
+    <departure-time>10:30</departure-time>
+    <arrival-date>2024-09-15</arrival-date>
+    <arrival-time>16:00</arrival-time>
+    <available-seats>180</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX03</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-10-01</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-10-01</arrival-date>
+    <arrival-time>13:45</arrival-time>
+    <available-seats>190</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX04</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-10-15</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-10-15</arrival-date>
+    <arrival-time>18:15</arrival-time>
+    <available-seats>220</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX05</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-10-30</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-30</arrival-date>
+    <arrival-time>16:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX06</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-11-01</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-11-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>195</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX07</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-11-15</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-15</arrival-date>
+    <arrival-time>19:30</arrival-time>
+    <available-seats>210</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX08</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>15:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>330.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX09</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>13:00</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>18:30</arrival-time>
+    <available-seats>180</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX10</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>17:00</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>22:30</arrival-time>
+    <available-seats>190</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA01</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-09-08</departure-date>
+    <departure-time>08:00</departure-time>
+    <arrival-date>2024-09-08</arrival-date>
+    <arrival-time>11:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA02</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-09-22</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-09-22</arrival-date>
+    <arrival-time>13:15</arrival-time>
+    <available-seats>190</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA03</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-10-08</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-10-08</arrival-date>
+    <arrival-time>11:00</arrival-time>
+    <available-seats>185</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA04</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-10-22</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-22</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA05</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-11-05</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-11-05</arrival-date>
+    <arrival-time>16:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>335.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA06</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-11-12</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-12</arrival-date>
+    <arrival-time>17:30</arrival-time>
+    <available-seats>215</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA07</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-11-18</departure-date>
+    <departure-time>10:00</departure-time>
+    <arrival-date>2024-11-18</arrival-date>
+    <arrival-time>13:30</arrival-time>
+    <available-seats>220</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA08</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-11-28</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-11-28</arrival-date>
+    <arrival-time>11:45</arrival-time>
+    <available-seats>200</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA09</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>09:30</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>190</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA10</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>13:15</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>16:45</arrival-time>
+    <available-seats>195</available-seats>
+    <price>360.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX11</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-09-01</departure-date>
+    <departure-time>09:00</departure-time>
+    <arrival-date>2024-09-01</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>300.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX12</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-09-15</departure-date>
+    <departure-time>10:30</departure-time>
+    <arrival-date>2024-09-15</arrival-date>
+    <arrival-time>16:00</arrival-time>
+    <available-seats>180</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX13</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-10-01</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-10-01</arrival-date>
+    <arrival-time>13:45</arrival-time>
+    <available-seats>190</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX14</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-10-15</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-10-15</arrival-date>
+    <arrival-time>18:15</arrival-time>
+    <available-seats>220</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX15</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-10-30</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-30</arrival-date>
+    <arrival-time>16:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX16</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-11-01</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-11-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>195</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX17</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-11-15</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-15</arrival-date>
+    <arrival-time>19:30</arrival-time>
+    <available-seats>210</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX18</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>15:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>330.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX19</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>13:00</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>18:30</arrival-time>
+    <available-seats>180</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX20</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>17:00</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>22:30</arrival-time>
+    <available-seats>190</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA11</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-09-08</departure-date>
+    <departure-time>08:00</departure-time>
+    <arrival-date>2024-09-08</arrival-date>
+    <arrival-time>11:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA12</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-09-22</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-09-22</arrival-date>
+    <arrival-time>13:15</arrival-time>
+    <available-seats>190</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA13</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-10-08</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-10-08</arrival-date>
+    <arrival-time>11:00</arrival-time>
+    <available-seats>185</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA14</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-10-22</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-22</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA15</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-11-05</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-11-05</arrival-date>
+    <arrival-time>16:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>335.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA16</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-11-12</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-12</arrival-date>
+    <arrival-time>17:30</arrival-time>
+    <available-seats>215</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA17</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-11-18</departure-date>
+    <departure-time>10:00</departure-time>
+    <arrival-date>2024-11-18</arrival-date>
+    <arrival-time>13:30</arrival-time>
+    <available-seats>220</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA18</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-11-28</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-11-28</arrival-date>
+    <arrival-time>11:45</arrival-time>
+    <available-seats>200</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA19</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>09:30</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>190</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA20</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>13:15</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>16:45</arrival-time>
+    <available-seats>195</available-seats>
+    <price>360.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX21</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-09-01</departure-date>
+    <departure-time>09:00</departure-time>
+    <arrival-date>2024-09-01</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>300.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX22</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-09-15</departure-date>
+    <departure-time>10:30</departure-time>
+    <arrival-date>2024-09-15</arrival-date>
+    <arrival-time>16:00</arrival-time>
+    <available-seats>180</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX23</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-10-01</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-10-01</arrival-date>
+    <arrival-time>13:45</arrival-time>
+    <available-seats>190</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX24</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-10-15</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-10-15</arrival-date>
+    <arrival-time>18:15</arrival-time>
+    <available-seats>220</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX25</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-10-30</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-30</arrival-date>
+    <arrival-time>16:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX26</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-11-01</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-11-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>195</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX27</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-11-15</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-15</arrival-date>
+    <arrival-time>19:30</arrival-time>
+    <available-seats>210</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX28</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>15:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>330.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX29</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>13:00</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>18:30</arrival-time>
+    <available-seats>180</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX30</flight-id>
+    <origin>San Francisco, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>17:00</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>22:30</arrival-time>
+    <available-seats>190</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA21</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-09-08</departure-date>
+    <departure-time>08:00</departure-time>
+    <arrival-date>2024-09-08</arrival-date>
+    <arrival-time>11:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA22</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-09-22</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-09-22</arrival-date>
+    <arrival-time>13:15</arrival-time>
+    <available-seats>190</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA23</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-10-08</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-10-08</arrival-date>
+    <arrival-time>11:00</arrival-time>
+    <available-seats>185</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA24</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-10-22</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-22</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA25</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-11-05</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-11-05</arrival-date>
+    <arrival-time>16:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>335.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA26</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-11-12</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-12</arrival-date>
+    <arrival-time>17:30</arrival-time>
+    <available-seats>215</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA27</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-11-18</departure-date>
+    <departure-time>10:00</departure-time>
+    <arrival-date>2024-11-18</arrival-date>
+    <arrival-time>13:30</arrival-time>
+    <available-seats>220</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA28</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-11-28</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-11-28</arrival-date>
+    <arrival-time>11:45</arrival-time>
+    <available-seats>200</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA29</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>09:30</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>190</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA30</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Francisco, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>13:15</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>16:45</arrival-time>
+    <available-seats>195</available-seats>
+    <price>360.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX31</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-09-01</departure-date>
+    <departure-time>09:00</departure-time>
+    <arrival-date>2024-09-01</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>300.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX32</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-09-15</departure-date>
+    <departure-time>10:30</departure-time>
+    <arrival-date>2024-09-15</arrival-date>
+    <arrival-time>16:00</arrival-time>
+    <available-seats>180</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX33</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-10-01</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-10-01</arrival-date>
+    <arrival-time>13:45</arrival-time>
+    <available-seats>190</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX34</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-10-15</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-10-15</arrival-date>
+    <arrival-time>18:15</arrival-time>
+    <available-seats>220</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX35</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-10-30</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-30</arrival-date>
+    <arrival-time>16:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX36</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-11-01</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-11-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>195</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX37</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-11-15</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-15</arrival-date>
+    <arrival-time>19:30</arrival-time>
+    <available-seats>210</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX38</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>15:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>330.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX39</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>13:00</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>18:30</arrival-time>
+    <available-seats>180</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX40</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>17:00</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>22:30</arrival-time>
+    <available-seats>190</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA31</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-09-08</departure-date>
+    <departure-time>08:00</departure-time>
+    <arrival-date>2024-09-08</arrival-date>
+    <arrival-time>11:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA32</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-09-22</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-09-22</arrival-date>
+    <arrival-time>13:15</arrival-time>
+    <available-seats>190</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA33</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-10-08</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-10-08</arrival-date>
+    <arrival-time>11:00</arrival-time>
+    <available-seats>185</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA34</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-10-22</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-22</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA35</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-11-05</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-11-05</arrival-date>
+    <arrival-time>16:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>335.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA36</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-11-12</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-12</arrival-date>
+    <arrival-time>17:30</arrival-time>
+    <available-seats>215</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA37</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-11-18</departure-date>
+    <departure-time>10:00</departure-time>
+    <arrival-date>2024-11-18</arrival-date>
+    <arrival-time>13:30</arrival-time>
+    <available-seats>220</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA38</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-11-28</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-11-28</arrival-date>
+    <arrival-time>11:45</arrival-time>
+    <available-seats>200</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA39</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>09:30</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>190</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA40</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>13:15</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>16:45</arrival-time>
+    <available-seats>195</available-seats>
+    <price>360.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX41</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-09-01</departure-date>
+    <departure-time>09:00</departure-time>
+    <arrival-date>2024-09-01</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>300.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX42</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-09-15</departure-date>
+    <departure-time>10:30</departure-time>
+    <arrival-date>2024-09-15</arrival-date>
+    <arrival-time>16:00</arrival-time>
+    <available-seats>180</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX43</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-10-01</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-10-01</arrival-date>
+    <arrival-time>13:45</arrival-time>
+    <available-seats>188</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX44</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-10-15</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-10-15</arrival-date>
+    <arrival-time>18:15</arrival-time>
+    <available-seats>220</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX45</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-10-30</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-30</arrival-date>
+    <arrival-time>16:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX46</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-11-01</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-11-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>195</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX47</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-11-15</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-15</arrival-date>
+    <arrival-time>19:30</arrival-time>
+    <available-seats>210</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX48</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>15:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>330.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX49</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>13:00</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>18:30</arrival-time>
+    <available-seats>180</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX50</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>17:00</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>22:30</arrival-time>
+    <available-seats>190</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA41</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-09-08</departure-date>
+    <departure-time>08:00</departure-time>
+    <arrival-date>2024-09-08</arrival-date>
+    <arrival-time>11:30</arrival-time>
+    <available-seats>198</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA42</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-09-22</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-09-22</arrival-date>
+    <arrival-time>13:15</arrival-time>
+    <available-seats>190</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA43</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-10-08</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-10-08</arrival-date>
+    <arrival-time>11:00</arrival-time>
+    <available-seats>185</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA44</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-10-22</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-22</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA45</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-11-05</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-11-05</arrival-date>
+    <arrival-time>16:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>335.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA46</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-11-12</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-12</arrival-date>
+    <arrival-time>17:30</arrival-time>
+    <available-seats>215</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA47</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-11-18</departure-date>
+    <departure-time>10:00</departure-time>
+    <arrival-date>2024-11-18</arrival-date>
+    <arrival-time>13:30</arrival-time>
+    <available-seats>220</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA48</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-11-28</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-11-28</arrival-date>
+    <arrival-time>11:45</arrival-time>
+    <available-seats>200</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA49</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>09:30</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>190</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA50</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>13:15</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>16:45</arrival-time>
+    <available-seats>195</available-seats>
+    <price>360.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX51</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-09-01</departure-date>
+    <departure-time>09:00</departure-time>
+    <arrival-date>2024-09-01</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>300.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX52</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-09-15</departure-date>
+    <departure-time>10:30</departure-time>
+    <arrival-date>2024-09-15</arrival-date>
+    <arrival-time>16:00</arrival-time>
+    <available-seats>180</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX53</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-10-01</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-10-01</arrival-date>
+    <arrival-time>13:45</arrival-time>
+    <available-seats>190</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX54</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-10-15</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-10-15</arrival-date>
+    <arrival-time>18:15</arrival-time>
+    <available-seats>220</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX55</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-10-30</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-30</arrival-date>
+    <arrival-time>16:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX56</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-11-01</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-11-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>195</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX57</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-11-15</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-15</arrival-date>
+    <arrival-time>19:30</arrival-time>
+    <available-seats>210</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX58</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>15:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>330.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX59</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>13:00</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>18:30</arrival-time>
+    <available-seats>180</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX60</flight-id>
+    <origin>Los Angeles, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>17:00</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>22:30</arrival-time>
+    <available-seats>190</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA51</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-09-08</departure-date>
+    <departure-time>08:00</departure-time>
+    <arrival-date>2024-09-08</arrival-date>
+    <arrival-time>11:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA52</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-09-22</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-09-22</arrival-date>
+    <arrival-time>13:15</arrival-time>
+    <available-seats>190</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA53</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-10-08</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-10-08</arrival-date>
+    <arrival-time>11:00</arrival-time>
+    <available-seats>185</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA54</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-10-22</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-22</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA55</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-11-05</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-11-05</arrival-date>
+    <arrival-time>16:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>335.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA56</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-11-12</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-12</arrival-date>
+    <arrival-time>17:30</arrival-time>
+    <available-seats>215</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA57</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-11-18</departure-date>
+    <departure-time>10:00</departure-time>
+    <arrival-date>2024-11-18</arrival-date>
+    <arrival-time>13:30</arrival-time>
+    <available-seats>220</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA58</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-11-28</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-11-28</arrival-date>
+    <arrival-time>11:45</arrival-time>
+    <available-seats>200</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA59</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>09:30</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>190</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA60</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>Los Angeles, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>13:15</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>16:45</arrival-time>
+    <available-seats>195</available-seats>
+    <price>360.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX61</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-09-01</departure-date>
+    <departure-time>09:00</departure-time>
+    <arrival-date>2024-09-01</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>300.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX62</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-09-15</departure-date>
+    <departure-time>10:30</departure-time>
+    <arrival-date>2024-09-15</arrival-date>
+    <arrival-time>16:00</arrival-time>
+    <available-seats>180</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX63</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-10-01</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-10-01</arrival-date>
+    <arrival-time>13:45</arrival-time>
+    <available-seats>190</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX64</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-10-15</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-10-15</arrival-date>
+    <arrival-time>18:15</arrival-time>
+    <available-seats>220</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX65</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-10-30</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-30</arrival-date>
+    <arrival-time>16:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX66</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-11-01</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-11-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>195</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX67</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-11-15</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-15</arrival-date>
+    <arrival-time>19:30</arrival-time>
+    <available-seats>210</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX68</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>15:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>330.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX69</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>13:00</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>18:30</arrival-time>
+    <available-seats>180</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX70</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Dallas, TX</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>17:00</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>22:30</arrival-time>
+    <available-seats>190</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA61</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-09-08</departure-date>
+    <departure-time>08:00</departure-time>
+    <arrival-date>2024-09-08</arrival-date>
+    <arrival-time>11:30</arrival-time>
+    <available-seats>196</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA62</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-09-22</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-09-22</arrival-date>
+    <arrival-time>13:15</arrival-time>
+    <available-seats>190</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA63</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-10-08</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-10-08</arrival-date>
+    <arrival-time>11:00</arrival-time>
+    <available-seats>185</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA64</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-10-22</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-22</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA65</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-11-05</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-11-05</arrival-date>
+    <arrival-time>16:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>335.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA66</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-11-12</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-12</arrival-date>
+    <arrival-time>17:30</arrival-time>
+    <available-seats>215</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA67</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-11-18</departure-date>
+    <departure-time>10:00</departure-time>
+    <arrival-date>2024-11-18</arrival-date>
+    <arrival-time>13:30</arrival-time>
+    <available-seats>220</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA68</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-11-28</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-11-28</arrival-date>
+    <arrival-time>11:45</arrival-time>
+    <available-seats>200</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA69</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>09:30</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>190</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA70</flight-id>
+    <origin>Dallas, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>13:15</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>16:45</arrival-time>
+    <available-seats>195</available-seats>
+    <price>360.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX71</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-09-01</departure-date>
+    <departure-time>09:00</departure-time>
+    <arrival-date>2024-09-01</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>300.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX72</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-09-15</departure-date>
+    <departure-time>10:30</departure-time>
+    <arrival-date>2024-09-15</arrival-date>
+    <arrival-time>16:00</arrival-time>
+    <available-seats>180</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX73</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-10-01</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-10-01</arrival-date>
+    <arrival-time>13:45</arrival-time>
+    <available-seats>190</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX74</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-10-15</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-10-15</arrival-date>
+    <arrival-time>18:15</arrival-time>
+    <available-seats>220</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX75</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-10-30</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-30</arrival-date>
+    <arrival-time>16:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX76</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-11-01</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-11-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>195</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX77</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-11-15</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-15</arrival-date>
+    <arrival-time>19:30</arrival-time>
+    <available-seats>210</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX78</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>15:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>330.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX79</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>13:00</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>18:30</arrival-time>
+    <available-seats>180</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX80</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Austin, TX</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>17:00</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>22:30</arrival-time>
+    <available-seats>190</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA71</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-09-08</departure-date>
+    <departure-time>08:00</departure-time>
+    <arrival-date>2024-09-08</arrival-date>
+    <arrival-time>11:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA72</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-09-22</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-09-22</arrival-date>
+    <arrival-time>13:15</arrival-time>
+    <available-seats>190</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA73</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-10-08</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-10-08</arrival-date>
+    <arrival-time>11:00</arrival-time>
+    <available-seats>185</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA74</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-10-22</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-22</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA75</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-11-05</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-11-05</arrival-date>
+    <arrival-time>16:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>335.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA76</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-11-12</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-12</arrival-date>
+    <arrival-time>17:30</arrival-time>
+    <available-seats>215</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA77</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-11-18</departure-date>
+    <departure-time>10:00</departure-time>
+    <arrival-date>2024-11-18</arrival-date>
+    <arrival-time>13:30</arrival-time>
+    <available-seats>220</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA78</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-11-28</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-11-28</arrival-date>
+    <arrival-time>11:45</arrival-time>
+    <available-seats>200</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA79</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>09:30</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>190</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA80</flight-id>
+    <origin>Austin, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>13:15</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>16:45</arrival-time>
+    <available-seats>195</available-seats>
+    <price>360.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX81</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-09-01</departure-date>
+    <departure-time>09:00</departure-time>
+    <arrival-date>2024-09-01</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>300.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX82</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-09-15</departure-date>
+    <departure-time>10:30</departure-time>
+    <arrival-date>2024-09-15</arrival-date>
+    <arrival-time>16:00</arrival-time>
+    <available-seats>180</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX83</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-10-01</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-10-01</arrival-date>
+    <arrival-time>13:45</arrival-time>
+    <available-seats>190</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX84</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-10-15</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-10-15</arrival-date>
+    <arrival-time>18:15</arrival-time>
+    <available-seats>220</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX85</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-10-30</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-30</arrival-date>
+    <arrival-time>16:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX86</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-11-01</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-11-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>195</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX87</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-11-15</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-15</arrival-date>
+    <arrival-time>19:30</arrival-time>
+    <available-seats>210</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX88</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>15:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>330.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX89</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-11-25</departure-date>
+    <departure-time>13:00</departure-time>
+    <arrival-date>2024-11-25</arrival-date>
+    <arrival-time>18:30</arrival-time>
+    <available-seats>180</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>CATX90</flight-id>
+    <origin>San Diego, CA</origin>
+    <destination>Houston, TX</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>17:00</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>22:30</arrival-time>
+    <available-seats>190</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA81</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-09-08</departure-date>
+    <departure-time>08:00</departure-time>
+    <arrival-date>2024-09-08</arrival-date>
+    <arrival-time>11:30</arrival-time>
+    <available-seats>200</available-seats>
+    <price>310.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA82</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-09-22</departure-date>
+    <departure-time>09:45</departure-time>
+    <arrival-date>2024-09-22</arrival-date>
+    <arrival-time>13:15</arrival-time>
+    <available-seats>190</available-seats>
+    <price>325.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA83</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-10-08</departure-date>
+    <departure-time>07:30</departure-time>
+    <arrival-date>2024-10-08</arrival-date>
+    <arrival-time>11:00</arrival-time>
+    <available-seats>185</available-seats>
+    <price>315.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA84</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-10-22</departure-date>
+    <departure-time>11:00</departure-time>
+    <arrival-date>2024-10-22</arrival-date>
+    <arrival-time>14:30</arrival-time>
+    <available-seats>205</available-seats>
+    <price>340.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA85</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-11-05</departure-date>
+    <departure-time>12:45</departure-time>
+    <arrival-date>2024-11-05</arrival-date>
+    <arrival-time>16:15</arrival-time>
+    <available-seats>200</available-seats>
+    <price>335.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA86</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-11-12</departure-date>
+    <departure-time>14:00</departure-time>
+    <arrival-date>2024-11-12</arrival-date>
+    <arrival-time>17:30</arrival-time>
+    <available-seats>215</available-seats>
+    <price>345.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA87</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-11-18</departure-date>
+    <departure-time>10:00</departure-time>
+    <arrival-date>2024-11-18</arrival-date>
+    <arrival-time>13:30</arrival-time>
+    <available-seats>220</available-seats>
+    <price>355.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA88</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-11-28</departure-date>
+    <departure-time>08:15</departure-time>
+    <arrival-date>2024-11-28</arrival-date>
+    <arrival-time>11:45</arrival-time>
+    <available-seats>200</available-seats>
+    <price>320.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA89</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>09:30</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>13:00</arrival-time>
+    <available-seats>190</available-seats>
+    <price>350.00</price>
+  </flight>
+  <flight>
+    <flight-id>TXCA90</flight-id>
+    <origin>Houston, TX</origin>
+    <destination>San Diego, CA</destination>
+    <departure-date>2024-12-01</departure-date>
+    <departure-time>13:15</departure-time>
+    <arrival-date>2024-12-01</arrival-date>
+    <arrival-time>16:45</arrival-time>
+    <available-seats>195</available-seats>
+    <price>360.00</price>
+  </flight>
+</flights>

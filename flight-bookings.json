@@ -1,0 +1,39 @@
+[
+  {
+    "trip-type": "round-trip",
+    "departing": {
+      "booking-id": "IY-91161",
+      "flight-id": "TXCA41",
+      "origin": "Austin, TX",
+      "destination": "Los Angeles, CA",
+      "departure-date": "2024-09-08",
+      "arrival-date": "2024-09-08",
+      "departure-time": "08:00",
+      "arrival-time": "11:30"
+    },
+    "returning": {
+      "booking-id": "ZE-19461",
+      "flight-id": "CATX43",
+      "origin": "Los Angeles, CA",
+      "destination": "Austin, TX",
+      "departure-date": "2024-10-01",
+      "arrival-date": "2024-10-01",
+      "departure-time": "08:15",
+      "arrival-time": "13:45"
+    },
+    "passengers": [
+      {
+        "SSN": "111-11-1111",
+        "first-name": "John",
+        "last-name": "Smith",
+        "date-of-birth": "1990-01-01"
+      },
+      {
+        "SSN": "000-00-0000",
+        "first-name": "Jane",
+        "last-name": "Smith",
+        "date-of-birth": "1990-01-02"
+      }
+    ]
+  }
+]

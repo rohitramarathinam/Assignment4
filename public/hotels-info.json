@@ -1,0 +1,144 @@
+{
+    "hotels": [
+        {
+            "hotel-id": "HTX01",
+            "hotel-name": "Dallas Grand Hotel",
+            "city": "Dallas, TX",
+            "available-rooms": 22,
+            "price-per-night": 150
+        },
+        {
+            "hotel-id": "HTX02",
+            "hotel-name": "Lone Star Suites",
+            "city": "Dallas, TX",
+            "available-rooms": 17,
+            "price-per-night": 120
+        },
+        {
+            "hotel-id": "HTX03",
+            "hotel-name": "Houston Central Inn",
+            "city": "Houston, TX",
+            "available-rooms": 30,
+            "price-per-night": 140
+        },
+        {
+            "hotel-id": "HTX04",
+            "hotel-name": "Bayou City Suites",
+            "city": "Houston, TX",
+            "available-rooms": 20,
+            "price-per-night": 125
+        },
+        {
+            "hotel-id": "HTX05",
+            "hotel-name": "Austin City Retreat",
+            "city": "Austin, TX",
+            "available-rooms": 22,
+            "price-per-night": 155
+        },
+        {
+            "hotel-id": "HTX06",
+            "hotel-name": "Capitol Hotel",
+            "city": "Austin, TX",
+            "available-rooms": 15,
+            "price-per-night": 145
+        },
+        {
+            "hotel-id": "HTX07",
+            "hotel-name": "San Antonio Riverfront Inn",
+            "city": "San Antonio, TX",
+            "available-rooms": 28,
+            "price-per-night": 130
+        },
+        {
+            "hotel-id": "HTX08",
+            "hotel-name": "Alamo Suites",
+            "city": "San Antonio, TX",
+            "available-rooms": 25,
+            "price-per-night": 135
+        },
+        {
+            "hotel-id": "HTX09",
+            "hotel-name": "El Paso Inn & Suites",
+            "city": "El Paso, TX",
+            "available-rooms": 18,
+            "price-per-night": 110
+        },
+        {
+            "hotel-id": "HTX10",
+            "hotel-name": "Desert View Lodge",
+            "city": "El Paso, TX",
+            "available-rooms": 20,
+            "price-per-night": 100
+        },
+        {
+            "hotel-id": "HCA01",
+            "hotel-name": "Golden Gate Hotel",
+            "city": "San Francisco, CA",
+            "available-rooms": 16,
+            "price-per-night": 210
+        },
+        {
+            "hotel-id": "HCA02",
+            "hotel-name": "Bayfront Suites",
+            "city": "San Francisco, CA",
+            "available-rooms": 12,
+            "price-per-night": 190
+        },
+        {
+            "hotel-id": "HCA03",
+            "hotel-name": "LA Luxury Stay",
+            "city": "Los Angeles, CA",
+            "available-rooms": 13,
+            "price-per-night": 225
+        },
+        {
+            "hotel-id": "HCA04",
+            "hotel-name": "Sunset Boulevard Inn",
+            "city": "Los Angeles, CA",
+            "available-rooms": 10,
+            "price-per-night": 200
+        },
+        {
+            "hotel-id": "HCA05",
+            "hotel-name": "San Diego Bay Hotel",
+            "city": "San Diego, CA",
+            "available-rooms": 25,
+            "price-per-night": 180
+        },
+        {
+            "hotel-id": "HCA06",
+            "hotel-name": "Coastal Inn",
+            "city": "San Diego, CA",
+            "available-rooms": 20,
+            "price-per-night": 170
+        },
+        {
+            "hotel-id": "HCA07",
+            "hotel-name": "Sacramento City Lodge",
+            "city": "Sacramento, CA",
+            "available-rooms": 30,
+            "price-per-night": 160
+        },
+        {
+            "hotel-id": "HCA08",
+            "hotel-name": "Capital Inn",
+            "city": "Sacramento, CA",
+            "available-rooms": 18,
+            "price-per-night": 150
+        },
+        {
+            "hotel-id": "HCA09",
+            "hotel-name": "San Jose Valley Inn",
+            "city": "San Jose, CA",
+            "available-rooms": 24,
+            "price-per-night": 160
+        },
+        {
+            "hotel-id": "HCA10",
+            "hotel-name": "Tech Hub Hotel",
+            "city": "San Jose, CA",
+            "available-rooms": 20,
+            "price-per-night": 175
+        }
+    ]
+}
