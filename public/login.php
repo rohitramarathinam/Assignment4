@@ -29,6 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['first_name'] = $user['first_name'];
             $_SESSION['last_name'] = $user['last_name'];
             $_SESSION['email'] = $user['email'];
+            $_SESSION['phone-no'] = $user['phone-no'];
+            $_SESSION['gender'] = $user['gender'];
+
             
             // Redirect to home or dashboard page
             header("Location: home.php");  // Change to the appropriate page
