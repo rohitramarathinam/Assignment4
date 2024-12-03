@@ -14,7 +14,7 @@
     
     <nav>
         <ul>
-            <li><a href="home.html">Home</a></li>
+            <li><a href="home.php">Home</a></li>
             <li><a href="stays.html">Stays</a></li>
             <li><a href="flights.html">Flights</a></li>
             <li><a href="contact.html">Contact Us</a></li>
@@ -50,8 +50,8 @@
         
         <main>
             <h2>Login</h2><br>
-            <form id="login-form">
-                <input type="text" id="fname" name="fname" placeholder="Email" required><br><br>
+            <form id="login-form" action="login.php" method="POST">
+                <input type="text" id="email" name="email" placeholder="Email" required><br><br>
                 <input type="password" id="pwd" name="pwd" placeholder="Password" required><br><br>
                 <input type="submit" value="Login"><br><br>
             </form>

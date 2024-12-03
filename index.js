@@ -11,7 +11,7 @@ app.use(express.static('public'));
 app.use(bodyParser.text({ type: 'application/xml' }));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/home.html');
+    res.sendFile(__dirname + '/public/home.php');
 });
 
 app.post('/write-contacts', (req, res) => {
