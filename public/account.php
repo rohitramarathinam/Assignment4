@@ -1,5 +1,5 @@
 <?php
-session_start();  // Start the session
+session_start();
 
 $is_logged_in = isset($_SESSION['first_name']);
 
@@ -73,10 +73,10 @@ $last_name = $_SESSION['last_name'];
         </aside>
         
         <main>
-            <h2>Home</h2><br>
-            <p>Welcome to our travel website.</p><br>
-            <p>You can book your stays, flights, rental cars, and cruises through our website.</p><br>
-            <p>If you have any questions please feel free to reach out to us through the Contact Us page. Thanks!</p>
+            <h2>My Account</h2><br>
+            <form action="load_flights.php" method="post">
+                <button type="submit">Load Flights Data</button>
+            </form>
         </main>
     </div>
     

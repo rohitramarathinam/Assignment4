@@ -15,11 +15,11 @@
     <nav>
         <ul>
             <li><a href="home.php">Home</a></li>
-            <li><a href="stays.html">Stays</a></li>
-            <li><a href="flights.html">Flights</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="account.html">Account</a></li>
+            <li><a href="stays.php">Stays</a></li>
+            <li><a href="flights.php">Flights</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
+            <li><a href="cart.php">Cart</a></li>
+            <li><a href="account.php">Account</a></li>
             <li><a href="register.html">Register</a></li>
             <li><a href="login.html">Login</a></li>
         </ul>
@@ -82,8 +82,6 @@
             // Prevent form submission until validation is complete
             event.preventDefault();
     
-            const ADMIN_PHONE_NO = "222-222-2222";
-    
             const fname = document.getElementById("first-name").value;
             const lname = document.getElementById("last-name").value;
             const dob = document.getElementById("dob").value;
@@ -100,11 +98,6 @@
     
             if (!phoneRegex.test(phoneNo)) {
                 alert('Phone number should be formatted ddd-ddd-dddd.');
-                return; // Stop further execution
-            }
-    
-            if (phoneNo === ADMIN_PHONE_NO) {
-                alert('Cannot enter an admin phone number.');
                 return;
             }
     
