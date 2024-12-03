@@ -82,7 +82,9 @@
         const phoneNo = document.getElementById('phone-no').value;
         const email = document.getElementById('email').value;
         const comment = document.getElementById('comment').value;
+        const contactID = Math.floor(Math.random() * 1e6); // Generates a number between 0 and 999,999
 
+        // need to add user DOB from database
         function createXML(fname, lname, phoneNo, gender, email, comment) {
             return `<contact>
         <firstName>${fname}</firstName>
@@ -91,6 +93,7 @@
         <gender>${gender}</gender>
         <email>${email}</email>
         <comment>${comment}</comment>
+        <contactID>${contactID}</contactID>
     </contact>`;
         }
 
