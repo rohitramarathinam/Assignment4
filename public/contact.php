@@ -10,6 +10,14 @@ if (!$is_logged_in) {
 
 $first_name = $_SESSION['first_name'];
 $last_name = $_SESSION['last_name'];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment']) && isset($_POST['contactID'])) {
+    // Handle JavaScript variable sent via AJAX
+    $comment = $_POST['comment'];
+    $contactID = $_POST['contactID'];
+    echo "Received from JavaScript";
+    exit; 
+}
 ?>
 
 
@@ -108,18 +116,55 @@ $last_name = $_SESSION['last_name'];
         // const email = document.getElementById('email').value;
         const comment = document.getElementById('comment').value;
         const contactID = Math.floor(Math.random() * 1e6); // Generates a number between 0 and 999,999
+        // Send JavaScript data to PHP using AJAX
+        fetch('', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `comment=${encodeURIComponent(comment)}&contactID=${encodeURIComponent(contactID)}`
+        })
+        .then(response => response.text())
+        .then(data => console.log(data));
 
         // need to add user DOB from database
-        function createXML(fname, lname, phoneNo, gender, email, comment) {
-            return `<contact>
-        <firstName>${fname}</firstName>
-        <lastName>${lname}</lastName>
-        <phoneNo>${phoneNo}</phoneNo>
-        <gender>${gender}</gender>
-        <email>${email}</email>
-        <comment>${comment}</comment>
-        <contactID>${contactID}</contactID>
-    </contact>`;
+        function createXML(comment, contactID) {
+
+            <?php
+            $filename = 'saved-contacts.xml';
+            $doc = new DOMDocument();
+            $doc->load($filename);
+            
+            // Locate the root element
+            $root = $doc->documentElement;
+
+            // Create a new <contact> element
+            $newContact = $doc->createElement('contact');
+
+            // Add child elements to the new contact
+            $fName = $doc->createElement('firstName', $_SESSION['first_name']);
+            $newContact->appendChild($fName);
+            $lname = $doc->createElement('lastName', $_SESSION['last_name']);
+            $newContact->appendChild($lname);
+            $phoneNo = $doc->createElement('phoneNo', $_SESSION['phone-no']);
+            $newContact->appendChild($phoneNo);
+            $gender = $doc->createElement('gender', $_SESSION['gender']);
+            $newContact->appendChild($gender);
+            $email = $doc->createElement('email', $_SESSION['email']);
+            $newContact->appendChild($email);
+            $comment = $doc->createElement('comment', $_SESSION['comment']);
+            $newContact->appendChild($comment);
+            $contactID = $doc->createElement('contactID', $_SESSION['contactID']);
+            $newContact->appendChild($contactID);
+
+            // Append the new contact to the root element
+            $root->appendChild($newContact);
+
+            // Format the output and save changes
+            $doc->formatOutput = true;
+            $doc->save($filename);
+            echo "New contact added!";
+            ?>
         }
 
         // // Validate first name
@@ -173,7 +218,7 @@ $last_name = $_SESSION['last_name'];
         else {
             
             event.preventDefault();
-            let xmlString = createXML(fname, lname, phoneNo, genderSelected.value, email, comment);
+            let xmlString = createXML(comment, contactID);
             const xhr = new XMLHttpRequest();
             xhr.open("POST", "/write-contacts", true);
             xhr.setRequestHeader("Content-Type", "application/xml");
