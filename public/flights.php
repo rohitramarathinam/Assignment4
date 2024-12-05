@@ -1,5 +1,6 @@
 <?php
-session_start(); 
+session_start();
+include 'db.php';
 
 $is_logged_in = isset($_SESSION['first_name']);
 

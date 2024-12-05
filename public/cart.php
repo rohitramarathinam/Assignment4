@@ -107,6 +107,14 @@ $last_name = $_SESSION['last_name'];
             };
     }
 
+    function createHotelObject(hotelObj, bookingId, guestsObj) {
+        return {
+            hotel: hotelObj,
+            bookingID: bookingId,
+            guests: guestsObj
+        }
+    }
+
     function validateUserInputs(ssn, fname, lname, dob) {
         const ssnRegex = /^\d{3}-\d{2}-\d{4}$/;
         const nameRegex = /^[a-zA-Z]+$/;
@@ -169,71 +177,149 @@ $last_name = $_SESSION['last_name'];
     document.getElementById("enter-passengers").addEventListener("click", handleBooking);
 
     function displayHotel() {
-        const display = document.getElementById("display");
-        display.innerHTML = ``;
-        const hotel = JSON.parse(sessionStorage.getItem("selectedHotel"));
-        
-        if (hotel) {
-            const hotelDiv = document.createElement('div');
-            const totalPrice = calculateHotelPrice(hotel['rooms'], hotel['price-per-night'], new Date(hotel['checkIn']), new Date(hotel['checkOut']));
-            hotelDiv.classList.add("hotel");
+    const display = document.getElementById("display");
+    display.innerHTML = ``;
+    const hotel = JSON.parse(sessionStorage.getItem("selectedHotel"));
+
+    if (hotel) {
+        const hotelDiv = document.createElement('div');
+        const totalPrice = calculateHotelPrice(hotel['rooms'], hotel['price-per-night'], new Date(hotel['checkIn']), new Date(hotel['checkOut']));
+        hotelDiv.classList.add("hotel");
+        hotelDiv.innerHTML = `
+            <p>ID: ${hotel['hotel-id']}</p>
+            <p>Name: ${hotel['hotel-name']}</p>
+            <p>City: ${hotel['city']}</p>
+            <p>Check-In Date: ${hotel['checkIn']}</p>
+            <p>Check-Out Date: ${hotel['checkOut']}</p>
+            <p>Number of Rooms: ${hotel['rooms']}</p>
+            <p>Adults: ${hotel['adults']}</p>
+            <p>Children: ${hotel['children']}</p>
+            <p>Infants: ${hotel['infants']}</p>
+            <p>Price per Night: $${hotel['price-per-night']}</p>
+            <p>Total Price: $${totalPrice}</p><br>
+            <div class="flex">
+                <input id="enter-guests" type="submit" value="Next"></button>
+                <input id="clear-hotel" type="submit" value="Clear"></button>
+            </div>
+        `;
+        display.appendChild(hotelDiv);
+
+        // Clear hotel booking
+        document.getElementById("clear-hotel").addEventListener("click", function() {
+            clearChoice("selectedHotel");
+            hotelDiv.innerHTML = ``;
+            hotelDiv.innerHTML = `Your hotel booking has been cleared.`;
+        });
+
+        // Enter guest details
+        document.getElementById("enter-guests").addEventListener("click", function() {
+            hotelDiv.innerHTML = ``;
             hotelDiv.innerHTML = `
-                <p>ID: ${hotel['hotel-id']}</p>
-                <p>Name: ${hotel['hotel-name']}</p>
-                <p>City: ${hotel['city']}</p>
-                <p>Check-In Date: ${hotel['checkIn']}</p>
-                <p>Check-Out Date: ${hotel['checkOut']}</p>
-                <p>Number of Rooms: ${hotel['rooms']}</p>
-                <p>Adults: ${hotel['adults']}</p>
-                <p>Children: ${hotel['children']}</p>
-                <p>Infants: ${hotel['infants']}</p>
-                <p>Price per Night: $${hotel['price-per-night']}</p>
-                <p>Total Price: $${totalPrice}</p><br>
-                <div class="flex">
-                    <input id="book-hotel" type="submit" value="Book"></button>
-                    <input id="clear-hotel" type="submit" value="Clear"></button>
-                </div>
+                <br><h3>Guest Details</h3><br>
+                <div id="guest-forms" class="flex"></div>
+                <input id="book-hotel" type="submit" value="Book"></button>
             `;
+
             display.appendChild(hotelDiv);
 
-            document.getElementById("book-hotel").addEventListener("click", function() {
+            const guests = Number(hotel["adults"]) + Number(hotel["children"]);
+            let ctr = 1;
+
+            // Create guest entry forms
+            while (ctr <= guests) {
+                const guestForm = document.createElement('div');
+                guestForm.classList.add("guest-form");
+                guestForm.innerHTML = `
+                    <h4>Guest ${ctr}</h4>
+                    <input type="text" id="ssn-${ctr}" name="ssn" placeholder="SSN" required><br><br>
+                    <input type="text" id="first-name-${ctr}" name="first-name" placeholder="First Name" required><br><br>
+                    <input type="text" id="last-name-${ctr}" name="last-name" placeholder="Last Name" required><br><br>
+                    <input type="text" id="dob-${ctr}" name="dob" placeholder="Date of Birth" required><br><br>
+                    <input type="text" id="category-${ctr}" name="category" placeholder="Category" required><br><br>
+                `;
+                document.getElementById("guest-forms").appendChild(guestForm);
+                ctr++;
+            }
+
+            // Handle hotel booking
+            document.getElementById("book-hotel").addEventListener("click", function(event) {
                 event.preventDefault();
-                let xmlString = createHotelXML(hotel);
+                let ctr = 1;
+                let guestsObj = [];
+                while (ctr <= guests) {
+                    let ssn = document.getElementById(`ssn-${ctr}`).value;
+                    let fname = document.getElementById(`first-name-${ctr}`).value;
+                    let lname = document.getElementById(`last-name-${ctr}`).value;
+                    let dob = document.getElementById(`dob-${ctr}`).value;
+                    let category = document.getElementById(`category-${ctr}`).value;
+
+                    if (validateUserInputs(ssn, fname, lname, dob) === false) {
+                        return;
+                    }
+
+                    const guest = {
+                        "SSN": ssn,
+                        "first-name": fname,
+                        "last-name": lname,
+                        "date-of-birth": dob,
+                        "category": category
+                    };
+                    guestsObj.push(guest);
+                    ctr++;
+                }
+
+                let bookingID = generateBookingUUID();
+                const jsonObject = createHotelObject(hotel, bookingID, guestsObj);
                 const xhr = new XMLHttpRequest();
                 xhr.open("POST", "book-hotels.php", true);
-                xhr.setRequestHeader("Content-Type", "application/xml");
-                xhr.onload = function() {};
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        console.log("Hotel booking successful.");
+                    } else {
+                        alert("Failed to book hotel.");
+                    }
+                };
                 xhr.onerror = function() {
                     alert("Unable to save your hotel details.");
                 };
-                xhr.send(xmlString);
+                xhr.send(JSON.stringify(jsonObject));
+
                 hotelDiv.innerHTML = ``;
-                hotelDiv.innerHTML = `<p>Your booking is confirmed.</p><br>`;
+                hotelDiv.innerHTML = `<h4>Your booking is confirmed.</h4><br>`;
                 hotelDiv.innerHTML += `
-                    <p>ID: ${hotel['hotel-id']}</p>
+                    <p>Booking ID: ${bookingID}</p>
+                    <p>Hotel ID: ${hotel['hotel-id']}</p>
                     <p>Name: ${hotel['hotel-name']}</p>
                     <p>City: ${hotel['city']}</p>
                     <p>Check-In Date: ${hotel['checkIn']}</p>
                     <p>Check-Out Date: ${hotel['checkOut']}</p>
                     <p>Number of Rooms: ${hotel['rooms']}</p>
-                    <p>Adults: ${hotel['adults']}</p>
-                    <p>Children: ${hotel['children']}</p>
-                    <p>Infants: ${hotel['infants']}</p>
-                    <p>Price per Night: $${hotel['price-per-night']}</p>
                     <p>Total Price: $${totalPrice}</p><br>
                 `;
-                clearChoice("selectedHotel");
-            });
 
-            document.getElementById("clear-hotel").addEventListener("click", function() {
+                hotelDiv.innerHTML += `<h4>Guests</h4><br>`;
+                guestsObj.forEach(guest => {
+                    const guestDiv = document.createElement('div');
+                    guestDiv.classList.add("guest");
+                    guestDiv.innerHTML = `
+                        <p>First Name: ${guest['first-name']}</p>
+                        <p>Last Name: ${guest['last-name']}</p>
+                        <p>SSN: ${guest['SSN']}</p>
+                        <p>Date of Birth: ${guest['date-of-birth']}</p>
+                        <p>Category: ${guest['category']}</p><br>
+                    `;
+                    hotelDiv.appendChild(guestDiv);
+                });
+
                 clearChoice("selectedHotel");
-                hotelDiv.innerHTML = ``;
-                hotelDiv.innerHTML = `Your hotel booking has been cleared.`;
             });
-        } else {
-            display.innerHTML = `<p>No hotels have been added to the cart.</p>`;
-        }
+        });
+    } else {
+        display.innerHTML = `<p>No hotels have been added to the cart.</p>`;
     }
+}
+
 
     function displayFlight() {
         const display = document.getElementById("display");
@@ -314,6 +400,7 @@ $last_name = $_SESSION['last_name'];
 
                 const passengers = Number(flight["total-passengers"]);
                 let ctr = 1;
+
                 while (ctr <= passengers) {
                     const passengerForm = document.createElement('div');
                     passengerForm.classList.add("passenger-form");
@@ -439,6 +526,11 @@ $last_name = $_SESSION['last_name'];
                 infants * 0.1 * price2
                 : 0)
         );
+    }
+
+    function calculateHotelPrice(rooms, ppn, checkin, checkout) {
+        let nights = (checkout - checkin) / (1000 * 60 * 60 * 24);
+        return nights * ppn * rooms;
     }
 
     function clearChoice(sessionId) {

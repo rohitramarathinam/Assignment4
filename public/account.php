@@ -83,6 +83,9 @@ $last_name = $_SESSION['last_name'];
             <form action="load_flights.php" method="post">
                 <button type="submit">Load Flights Data</button>
             </form>
+            <form action="load_hotels.php" method="post">
+                <button type="submit">Load Hotels Data</button>
+            </form>
         </main>
     </div>
     

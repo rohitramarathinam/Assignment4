@@ -7,18 +7,7 @@ session_start();
 //     exit;
 // }
 
-// Database connection details
-$servername = "localhost";
-$username = "root";
-$password = ""; // after cloning, enter your password here if you have one setup
-$dbname = ""; // after cloning, enter your db name here if you have one setup
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'db.php';
 
 // Path to the XML file
 $xml_file = 'flights-info.xml';
