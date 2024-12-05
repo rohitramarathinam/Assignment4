@@ -8,6 +8,12 @@ if (!$is_logged_in) {
     exit;
 }
 
+if ($_SESSION['phone-no'] !== "222-222-2222") {
+    echo "<script>alert('Phone number: " . $_SESSION['phone-no'] . "');</script>";
+    // header("Location: register.html");
+    // exit;
+}
+
 $first_name = $_SESSION['first_name'];
 $last_name = $_SESSION['last_name'];
 ?>

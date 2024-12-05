@@ -161,9 +161,6 @@ $last_name = $_SESSION['last_name'];
         confirmBooking(flight, flight2, passengers);
     }
 
-    // document.addEventListener("DOMContentLoaded", function () {
-
-    // });
     document.getElementById("htl").addEventListener("click", displayHotel);
     document.getElementById("flt").addEventListener("click", displayFlight);
     document.getElementById("enter-passengers").addEventListener("click", handleBooking);
@@ -200,7 +197,7 @@ $last_name = $_SESSION['last_name'];
                 event.preventDefault();
                 let xmlString = createHotelXML(hotel);
                 const xhr = new XMLHttpRequest();
-                xhr.open("POST", "book-hotels.php", true);
+                xhr.open("POST", "/book-hotels", true);
                 xhr.setRequestHeader("Content-Type", "application/xml");
                 xhr.onload = function() {};
                 xhr.onerror = function() {
@@ -314,6 +311,7 @@ $last_name = $_SESSION['last_name'];
 
                 const passengers = Number(flight["total-passengers"]);
                 let ctr = 1;
+                
                 while (ctr <= passengers) {
                     const passengerForm = document.createElement('div');
                     passengerForm.classList.add("passenger-form");
@@ -323,7 +321,6 @@ $last_name = $_SESSION['last_name'];
                         <input type="text" id="first-name-${ctr}" name="first-name" placeholder="First Name" required><br><br>
                         <input type="text" id="last-name-${ctr}" name="last-name" placeholder="Last Name" required><br><br>
                         <input type="text" id="dob-${ctr}" name="dob" placeholder="Date of Birth" required><br><br>
-                        <input type="text" id="category-${ctr}" name="category" placeholder="Category" required><br><br>
                     `;
                     document.getElementById("passenger-forms").appendChild(passengerForm);
                     ctr++;
@@ -338,7 +335,6 @@ $last_name = $_SESSION['last_name'];
                         let fname = document.getElementById(`first-name-${ctr}`).value;
                         let lname = document.getElementById(`last-name-${ctr}`).value;
                         let dob = document.getElementById(`dob-${ctr}`).value;
-                        let category = document.getElementById(`category-${ctr}`).value;
 
                         if (validateUserInputs(ssn, fname, lname, dob) === false) {
                             return;
@@ -348,8 +344,7 @@ $last_name = $_SESSION['last_name'];
                             "SSN": document.getElementById(`ssn-${ctr}`).value,
                             "first-name": document.getElementById(`first-name-${ctr}`).value,
                             "last-name": document.getElementById(`last-name-${ctr}`).value,
-                            "date-of-birth": document.getElementById(`dob-${ctr}`).value,
-                            "category": document.getElementById(`category-${ctr}`).value
+                            "date-of-birth": document.getElementById(`dob-${ctr}`).value
                         };
                         passengersObj.push(passenger);
                         ctr++;
@@ -415,8 +410,7 @@ $last_name = $_SESSION['last_name'];
                             <p>First Name: ${passenger['first-name']}</p>
                             <p>Last Name: ${passenger['last-name']}</p>
                             <p>SSN: ${passenger['SSN']}</p>
-                            <p>Date of Birth: ${passenger['date-of-birth']}</p>
-                            <p>Category: ${passenger['category']}</p><br>
+                            <p>Date of Birth: ${passenger['date-of-birth']}</p><br>
                         `;
                         flightDiv.appendChild(passengerDiv);
                     });
@@ -428,29 +422,10 @@ $last_name = $_SESSION['last_name'];
         }
     }
 
-    function calculateFlightPrice(price1, price2, adults, children, infants) {
-        return (
-            adults * price1 +
-            children * 0.7 * price1 +
-            infants * 0.1 * price1 +
-            (price2
-                ? adults * price2 +
-                children * 0.7 * price2 +
-                infants * 0.1 * price2
-                : 0)
-        );
-    }
-
-    function clearChoice(sessionId) {
-        sessionStorage.removeItem(sessionId);
-    }
-
-
     function generateBookingUUID() {
         let part1 = String.fromCharCode(65 + Math.floor(Math.random() * 26)) + String.fromCharCode(65 + Math.floor(Math.random() * 26));
         let part2 = Array.from({length : 5}, () => Math.floor(Math.random()*10)).join("");
         return `${part1}-${part2}`;
     }
-
 </script>
 </html>

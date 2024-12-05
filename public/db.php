@@ -2,8 +2,8 @@
 // Database connection file
 $host = 'localhost';
 $user = 'root';
-$password = ''; // after cloning, enter your password here if you have one setup
-$dbname = ''; // after cloning, enter your db name here if you have one setup
+$password = "Theguydownstairs1"; // after cloning, enter your password here if you have one setup
+$dbname = "Assignment4"; // after cloning, enter your db name here if you have one setup
 
 $conn = new mysqli($host, $user, $password, $dbname);
 
