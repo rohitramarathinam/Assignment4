@@ -48,8 +48,8 @@ function getPassengersForFlight($flightBookingId) {
 // Function to fetch all flights and hotels for September 2024
 function getBookingsForSeptember2024() {
     global $conn;
-    $sql = "SELECT * FROM flight_booking WHERE departure_date BETWEEN '2024-09-01' AND '2024-09-30' 
-            UNION 
+    $sql = "SELECT * FROM flights JOIN flight_booking ON flight_booking.flight_id = flights.flight_id WHERE flights.departure_date BETWEEN '2024-09-01' AND '2024-09-30'
+            UNION
             SELECT * FROM hotel_booking WHERE check_in BETWEEN '2024-09-01' AND '2024-09-30'";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
@@ -130,12 +130,7 @@ if ($ssn) {
             <li><a href="contact.php">Contact Us</a></li>
             <li><a href="cart.php">Cart</a></li>
             <li><a href="admin-account.php">Account</a></li>
-            <?php if (!$is_logged_in): ?>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
-            <?php else: ?>
-                <li><a href="logout.php">Logout</a></li>
-            <?php endif; ?>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
     </nav>
     
