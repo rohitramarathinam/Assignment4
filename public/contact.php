@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment']) && isset($
             <li><a href="flights.php">Flights</a></li>
             <li><a href="contact.php">Contact Us</a></li>
             <li><a href="cart.php">Cart</a></li>
-            <li><a href="account.php">Account</a></li>
+            <li><a href="admin-account.php">Account</a></li>
             <!-- <li><a href="register.html">Register</a></li>
             <li><a href="login.html">Login</a></li> -->
             <?php if (!$is_logged_in): ?>
