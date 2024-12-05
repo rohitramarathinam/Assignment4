@@ -22,6 +22,7 @@ $flightID = $payload['departing']['flight-id'];
 $passengers = $payload['passengers'];
 $price = $payload['departing']['price'];
 $totalPrice = calculateTotalPrice($price, $payload['departing']['adults'], $payload['departing']['children'], $payload['departing']['infants']);
+$totalPassengers = $payload['departing']['total-passengers'];
 
 // Generate a unique flight booking ID
 $flightBookingID = $payload['departing']['booking-id'];
@@ -71,6 +72,16 @@ foreach ($passengers as $passenger) {
     }
 }
 
+$sql = "UPDATE flights SET available_seats = available_seats - ? WHERE flight_id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("is", $totalPassengers, $flightID);
+
+if (!$stmt->execute()) {
+    echo json_encode(['error' => 'Failed to update flight seats']);
+    http_response_code(500);
+    exit;
+}
+
 if ($payload["returning"]) {
     // Extract the details for the returning flight
     $returnFlightID = $payload["returning"]['flight-id'];
@@ -107,6 +118,16 @@ if ($payload["returning"]) {
             http_response_code(500);
             exit;
         }
+    }
+
+    $sql = "UPDATE flights SET available_seats = available_seats - ? WHERE flight_id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("is", $totalPassengers, $returnFlightID);
+
+    if (!$stmt->execute()) {
+        echo json_encode(['error' => 'Failed to update flight seats']);
+        http_response_code(500);
+        exit;
     }
 }
 
