@@ -436,7 +436,9 @@ $last_name = $_SESSION['last_name'];
                             "first-name": document.getElementById(`first-name-${ctr}`).value,
                             "last-name": document.getElementById(`last-name-${ctr}`).value,
                             "date-of-birth": document.getElementById(`dob-${ctr}`).value,
-                            "category": document.getElementById(`category-${ctr}`).value
+                            "category": document.getElementById(`category-${ctr}`).value,
+                            "ticketId1": generateBookingUUID(),
+                            "ticketId2": flight2 ? generateBookingUUID() : null
                         };
                         passengersObj.push(passenger);
                         ctr++;
@@ -503,8 +505,19 @@ $last_name = $_SESSION['last_name'];
                             <p>Last Name: ${passenger['last-name']}</p>
                             <p>SSN: ${passenger['SSN']}</p>
                             <p>Date of Birth: ${passenger['date-of-birth']}</p>
-                            <p>Category: ${passenger['category']}</p><br>
+                            <p>Category: ${passenger['category']}</p>
+                            <p>Ticket ID: ${passenger['ticketId1']}</p>
+                            <p>Ticket Price: ${calculateSpecificPrice(Number(flight["price"]), passenger['category'])}</p>
+                            <p>Flight Booking ID: ${bid1}</p>
                         `;
+                        if (bid2) {
+                            passengerDiv.innerHTML += `
+                                <p>Ticket ID: ${passenger['ticketId2']}</p>
+                                <p>Ticket Price: ${calculateSpecificPrice(Number(flight2["price"]), passenger['category'])}</p>
+                                <p>Flight Booking ID: ${bid2}</p>
+                            `;
+                        }
+                        passengerDiv.innerHTML += `<br>`;
                         flightDiv.appendChild(passengerDiv);
                     });
                     clearChoice("selectedFlight");
@@ -512,6 +525,19 @@ $last_name = $_SESSION['last_name'];
             });
         } else {
             display.innerHTML = `<p>No flights have been added to the cart.</p>`;
+        }
+    }
+
+    function calculateSpecificPrice(price, category) {
+        switch (category) {
+            case "adults":
+                return price;
+            case "children":
+                return 0.7 * price;
+            case "infants":
+                return 0.1 * price;
+            default:
+                return price;
         }
     }
 

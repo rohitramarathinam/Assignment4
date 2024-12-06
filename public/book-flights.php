@@ -58,7 +58,7 @@ foreach ($passengers as $passenger) {
     }
 
     // Insert ticket into the `tickets` table
-    $ticketID = generateUUID();  // Generate a unique ticket ID
+    $ticketID = $passenger['ticketId1'];  // Generate a unique ticket ID
     $ind_price = calculateTicketPrice($category, $price);  // Add a function to calculate ticket price based on category
 
     $sql_ticket = "INSERT INTO tickets (ticket_id, flight_booking_id, ssn, price) VALUES (?, ?, ?, ?)";
@@ -106,7 +106,7 @@ if ($payload["returning"]) {
         $category = $passenger['category']; // Category is part of each passenger in payload
 
         // Insert ticket into the `tickets` table for the return flight
-        $returnTicketID = generateUUID();  // Generate a unique ticket ID
+        $returnTicketID = $passenger['ticketId2'];  // Generate a unique ticket ID
         $returnIndPrice = calculateTicketPrice($category, $returnPrice);
 
         $sql_ticket = "INSERT INTO tickets (ticket_id, flight_booking_id, ssn, price) VALUES (?, ?, ?, ?)";
