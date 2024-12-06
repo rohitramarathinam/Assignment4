@@ -46,11 +46,19 @@ function getPassengersForFlight($flightBookingId) {
 }
 
 // Function to fetch all flights and hotels for September 2024
-function getBookingsForSeptember2024() {
+function getFlightBookingsForSeptember2024() {
     global $conn;
     $sql = "SELECT * FROM flights JOIN flight_booking ON flight_booking.flight_id = flights.flight_id WHERE flights.departure_date BETWEEN '2024-09-01' AND '2024-09-30'
-            UNION
-            SELECT * FROM hotel_booking WHERE check_in BETWEEN '2024-09-01' AND '2024-09-30'";
+            ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+}
+
+function getHotelBookingsForSeptember2024() {
+    global $conn;
+    $sql = "SELECT * FROM hotels JOIN hotel_booking ON hotel_booking.hotel_id = hotels.hotel_id WHERE hotel_booking.check_in BETWEEN '2024-09-01' AND '2024-09-30'
+            ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -83,7 +91,11 @@ $hotelBooking = null;
 $passengers = [];
 $septemberFlightHotel = [];
 $flightsBySSN = [];
+$septemberHotelBookings = [];
 
+if (isset($_POST['september_hotel_bookings'])) {
+    $septemberHotelBookings = getHotelBookingsForSeptember2024();
+}
 if ($flightBookingId) {
     $flightBooking = getFlightBookingInfo($flightBookingId);
 }
@@ -97,7 +109,7 @@ if ($flightBookingId) {
 }
 
 if ($septemberBookings) {
-    $septemberFlightHotel = getBookingsForSeptember2024();
+    $septemberFlightHotel = getFlightBookingsForSeptember2024();
 }
 
 if ($ssn) {
@@ -158,9 +170,9 @@ if ($ssn) {
         </aside>
         
         <main>
-            <h2>Account</h2><br>
+            <h2>My Account</h2><br>
             
-            <!-- Form to retrieve flight and hotel details -->
+            <!-- Existing Forms -->
             <h3>Retrieve Flight and Hotel Information</h3>
             <form method="POST">
                 <label for="flight_booking_id">Enter Flight Booking ID:</label>
@@ -175,7 +187,11 @@ if ($ssn) {
             </form>
 
             <form method="POST">
-                <button type="submit" name="september_bookings">Retrieve Bookings for September 2024</button>
+                <button type="submit" name="september_bookings">Retrieve Flight Bookings for September 2024</button>
+            </form>
+
+            <form method="POST">
+                <button type="submit" name="september_hotel_bookings">Retrieve Hotel Bookings for September 2024</button>
             </form>
 
             <form method="POST">
@@ -206,14 +222,27 @@ if ($ssn) {
                 <p>Total Price: $<?php echo $hotelBooking['total_price']; ?></p>
             <?php endif; ?>
 
-            <!-- Display September Bookings -->
+            <!-- Display September Flight Bookings -->
             <?php if ($septemberBookings && count($septemberFlightHotel) > 0): ?>
-                <h4>Bookings for September 2024</h4>
+                <h4>Flight Bookings for September 2024</h4>
                 <?php foreach ($septemberFlightHotel as $booking): ?>
-                    <p>Booking ID: <?php echo $booking['flight_booking_id'] ?? $booking['hotel_booking_id']; ?></p>
-                    <p>Booking Type: <?php echo isset($booking['flight_booking_id']) ? 'Flight' : 'Hotel'; ?></p>
-                    <p>Price: $<?php echo $booking['total_price']; ?></p>
+                    <p>Booking ID: <?php echo $booking['flight_booking_id']; ?></p>
+                    <p>Price: $<?php echo $booking['total_price']; ?></p><br>
                 <?php endforeach; ?>
+            <?php endif; ?>
+
+            <!-- Display September Hotel Bookings -->
+            <?php if (isset($_POST['september_hotel_bookings']) && count($septemberHotelBookings) > 0): ?>
+                <h4>Hotel Bookings for September 2024</h4>
+                <?php foreach ($septemberHotelBookings as $booking): ?>
+                    <p>Booking ID: <?php echo $booking['hotel_booking_id']; ?></p>
+                    <p>Hotel Name: <?php echo $booking['hotel_name']; ?></p>
+                    <p>Check In: <?php echo $booking['check_in']; ?></p>
+                    <p>Check Out: <?php echo $booking['check_out']; ?></p>
+                    <p>Total Price: $<?php echo $booking['total_price']; ?></p><br>
+                <?php endforeach; ?>
+            <?php elseif (isset($_POST['september_hotel_bookings'])): ?>
+                <p>No hotel bookings found for September 2024.</p>
             <?php endif; ?>
 
             <!-- Display Flights by SSN -->
@@ -227,6 +256,7 @@ if ($ssn) {
                 <?php endforeach; ?>
             <?php endif; ?>
         </main>
+
 
     </div>
     
