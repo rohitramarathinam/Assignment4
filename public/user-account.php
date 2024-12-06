@@ -118,7 +118,7 @@ if ($ssn) {
 </head>
 <body>
     <header>
-        <h1>Assignment3</h1>
+        <h1>Assignment4</h1>
         <p>Hi, <?php echo $user['first_name'] . ' ' . $user['last_name']; ?>!</p>
     </header>
     
