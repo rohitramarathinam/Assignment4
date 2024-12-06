@@ -183,11 +183,11 @@ $last_name = $_SESSION['last_name'];
 
     if (hotel) {
         const hotelDiv = document.createElement('div');
-        const totalPrice = calculateHotelPrice(hotel['rooms'], hotel['price-per-night'], new Date(hotel['checkIn']), new Date(hotel['checkOut']));
+        const totalPrice = calculateHotelPrice(hotel['rooms'], hotel['price_per_night'], new Date(hotel['checkIn']), new Date(hotel['checkOut']));
         hotelDiv.classList.add("hotel");
         hotelDiv.innerHTML = `
-            <p>ID: ${hotel['hotel-id']}</p>
-            <p>Name: ${hotel['hotel-name']}</p>
+            <p>ID: ${hotel['hotel_id']}</p>
+            <p>Name: ${hotel['hotel_name']}</p>
             <p>City: ${hotel['city']}</p>
             <p>Check-In Date: ${hotel['checkIn']}</p>
             <p>Check-Out Date: ${hotel['checkOut']}</p>
@@ -195,7 +195,7 @@ $last_name = $_SESSION['last_name'];
             <p>Adults: ${hotel['adults']}</p>
             <p>Children: ${hotel['children']}</p>
             <p>Infants: ${hotel['infants']}</p>
-            <p>Price per Night: $${hotel['price-per-night']}</p>
+            <p>Price per Night: $${hotel['price_per_night']}</p>
             <p>Total Price: $${totalPrice}</p><br>
             <div class="flex">
                 <input id="enter-guests" type="submit" value="Next"></button>
@@ -289,8 +289,8 @@ $last_name = $_SESSION['last_name'];
                 hotelDiv.innerHTML = `<h4>Your booking is confirmed.</h4><br>`;
                 hotelDiv.innerHTML += `
                     <p>Booking ID: ${bookingID}</p>
-                    <p>Hotel ID: ${hotel['hotel-id']}</p>
-                    <p>Name: ${hotel['hotel-name']}</p>
+                    <p>Hotel ID: ${hotel['hotel_id']}</p>
+                    <p>Name: ${hotel['hotel_name']}</p>
                     <p>City: ${hotel['city']}</p>
                     <p>Check-In Date: ${hotel['checkIn']}</p>
                     <p>Check-Out Date: ${hotel['checkOut']}</p>

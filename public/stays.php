@@ -105,42 +105,50 @@ $last_name = $_SESSION['last_name'];
 
     function searchHotels(checkIn, checkOut, rooms, passengers) {
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "hotels-info.json", true);
+        const city = document.getElementById('city-name').value; // Get the city input from the form
+
+        // Construct the URL with the query parameters
+        const _city = encodeURIComponent(document.getElementById('city-name').value);
+
+        xhr.open("GET", `searchHotels.php?city=${_city}`, true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
-                const hotelsData = JSON.parse(xhr.responseText);
-                const hotels = hotelsData.hotels
+                const hotelsData = JSON.parse(xhr.responseText); // Parse the response JSON
+                const hotels = hotelsData.hotels; // Get the list of hotels from the response
+                console.log(hotels)
 
-                const city = document.getElementById('city-name').value;
-                const cityHotels = hotels.filter(hotel => hotel.city === city && hotel['available-rooms'] >= rooms);
                 const display = document.getElementById('display-details');
-                display.innerHTML = '';
-                if (cityHotels.length > 0) {
+                display.innerHTML = ''; // Clear previous results
+
+                if (hotels.length > 0) {
                     let ctr = 1;
-                    cityHotels.forEach(hotel => {
+                    hotels.forEach(hotel => {
                         const hotelDiv = document.createElement('div');
                         hotelDiv.classList.add("hotel");
                         hotelDiv.innerHTML = `
-                            <p>ID: ${hotel['hotel-id']}</p>
-                            <p>Name: ${hotel['hotel-name']}</p>
+                            <p>ID: ${hotel['hotel_id']}</p>
+                            <p>Name: ${hotel['hotel_name']}</p>
                             <p>City: ${hotel['city']}</p>
                             <p>Check-In Date: ${checkIn}</p>
                             <p>Check-Out Date: ${checkOut}</p>
                             <p>Rooms: ${rooms}</p>
-                            <p>Price per Night: $${hotel['price-per-night']}</p><br>
+                            <p>Price per Night: $${hotel['price_per_night']}</p><br>
                             <button class="add-to-cart-${ctr}">Add to Cart</button><br><br>
                         `;
                         display.appendChild(hotelDiv);
+
+                        // Attach the add-to-cart event to each hotel
                         document.querySelector(`.add-to-cart-${ctr}`).addEventListener('click', () => addToCart(hotel, rooms, checkIn, checkOut, passengers));
                         ctr++;
                     });
                 } else {
                     display.innerHTML = '<p>No hotels found for selected city.</p>';
                 }
-            };
-        }
+            }
+        };
         xhr.send();
     }
+
 
     function addToCart(hotel, rooms, checkIn, checkOut, passengers) {
         const hotelData = {
@@ -153,7 +161,7 @@ $last_name = $_SESSION['last_name'];
             infants: passengers[2]
         };
         sessionStorage.setItem("selectedHotel", JSON.stringify(hotelData));
-        alert(`${hotel['hotel-name']} has been added to the cart.`)
+        alert(`${hotel['hotel_name']} has been added to the cart.`)
     }
 
     function isDateValid(date) {

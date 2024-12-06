@@ -150,37 +150,93 @@ $last_name = $_SESSION['last_name'];
 
         // Clear previous search results
         display.innerHTML = '';
-        displayRet.innerHTML = '';
 
         const xhr = new XMLHttpRequest();
-        xhr.open("GET", "searchFlights.php?tripType=" + tripType + 
-                                "&origin=" + origin + 
-                                "&destination=" + destination + 
-                                "&departureDate=" + departureDate + 
-                                "&returnDate=" + returnDate + 
-                                "&totalPassengers=" + totalPassengers, true);
-
+        xhr.open("GET", "flights-info.xml", true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
-                const response = JSON.parse(xhr.responseText);
+                const xmlDoc = xhr.responseXML;
+                const flights = Array.from(xmlDoc.getElementsByTagName("flight"));
+                
+                let outboundFlights = flights.filter(flight => {
+                    const flightOrigin = flight.getElementsByTagName("origin")[0].textContent;
+                    const flightDestination = flight.getElementsByTagName("destination")[0].textContent;
+                    const flightDate = flight.getElementsByTagName("departure-date")[0].textContent;
+                    const availableSeats = parseInt(flight.getElementsByTagName("available-seats")[0].textContent);
 
-                const outboundFlights = response.outboundFlights;
-                const returnFlights = response.returnFlights;
+                    return flightOrigin === origin && 
+                        flightDestination === destination && 
+                        flightDate === departureDate && 
+                        availableSeats >= totalPassengers;
+                });
 
-                if (outboundFlights.length === 0) {
-                    display.innerHTML = `<p>No flights found for the selected departure date.</p>`;
-                } else {
-                    display.innerHTML = `<h4>Departing</h4><br>`;
-                    outboundFlights.forEach(flight => displayFlight(flight, false));
+                let returnFlights = [];
+                if (tripType === "round-trip") {
+                    returnFlights = flights.filter(flight => {
+                        const flightOrigin = flight.getElementsByTagName("origin")[0].textContent;
+                        const flightDestination = flight.getElementsByTagName("destination")[0].textContent;
+                        const flightDate = flight.getElementsByTagName("departure-date")[0].textContent;
+                        const availableSeats = parseInt(flight.getElementsByTagName("available-seats")[0].textContent);
+
+                        return flightOrigin === destination && 
+                            flightDestination === origin && 
+                            flightDate === returnDate && 
+                            availableSeats >= totalPassengers;
+                    });
                 }
 
-                if (tripType === "round-trip") {
-                    if (returnFlights.length === 0) {
-                        displayRet.innerHTML = `<p>No return flights found for the selected return date.</p>`;
-                    } else {
-                        displayRet.innerHTML = `<h4>Returning</h4><br>`;
+                if (outboundFlights.length === 0) {
+                    const targetDate = new Date(departureDate);
+
+                    outboundFlights = flights.filter(flight => {
+                        const flightOrigin = flight.getElementsByTagName("origin")[0].textContent;
+                        const flightDestination = flight.getElementsByTagName("destination")[0].textContent;
+                        const flightDate = flight.getElementsByTagName("departure-date")[0].textContent;
+                        const availableSeats = parseInt(flight.getElementsByTagName("available-seats")[0].textContent);
+
+                        const flightDateObj = new Date(flightDate);
+                        const dateDifference = Math.abs((flightDateObj - targetDate) / (1000 * 60 * 60 * 24));
+
+                        return flightOrigin === origin && 
+                            flightDestination === destination && 
+                            dateDifference <= 3 && 
+                            availableSeats >= totalPassengers;
+                    });
+                }
+
+                if (tripType === "round-trip" && returnFlights.length === 0) {
+                    const targetDate = new Date(returnDate);
+
+                    returnFlights = flights.filter(flight => {
+                        const flightOrigin = flight.getElementsByTagName("origin")[0].textContent;
+                        const flightDestination = flight.getElementsByTagName("destination")[0].textContent;
+                        const flightDate = flight.getElementsByTagName("departure-date")[0].textContent;
+                        const availableSeats = parseInt(flight.getElementsByTagName("available-seats")[0].textContent);
+
+                        const flightDateObj = new Date(flightDate);
+                        const dateDifference = Math.abs((flightDateObj - targetDate) / (1000 * 60 * 60 * 24));
+
+                        return flightOrigin === destination && 
+                            flightDestination === origin && 
+                            dateDifference <= 3 && 
+                            availableSeats >= totalPassengers;
+                    });
+                }
+
+                if (outboundFlights.length > 0) {
+                    display.innerHTML = ``;
+                    displayRet.innerHTML = ``;
+                    display.innerHTML = `<h4>Departing</h4><br>`;
+                    outboundFlights.forEach(flight => displayFlight(flight, false));
+                    if (tripType === "round-trip" && returnFlights.length > 0) {
+                        displayRet.innerHTML += `<h4>Returning</h4><br>`;
                         returnFlights.forEach(flight => displayFlight(flight, true));
+                    } else if (tripType === "round-trip") {
+                        displayRet.innerHTML = `<p>No return flights found on or within 3 days of selected return date.`;
                     }
+                } else {
+                    display.innerHTML = `<p>No flights found on or within 3 days of selected departure date.`;
+                    displayRet.innerHTML = ``;
                 }
             }
         };
@@ -189,15 +245,15 @@ $last_name = $_SESSION['last_name'];
     }
 
     function displayFlight(flight, returning) {
-        const flightId = flight['flight_id'];
-        const flightOrigin = flight['origin'];
-        const flightDestination = flight['destination'];
-        const flightDate = flight['departure_date'];
-        const arrivalDate = flight['arrival_date'];
-        const departureTime = flight['departure_time'];
-        const arrivalTime = flight['arrival_time'];
-        const availableSeats = flight['available_seats'];
-        const price = flight['price'];
+        const flightId = flight.getElementsByTagName("flight-id")[0].textContent;
+        const flightOrigin = flight.getElementsByTagName("origin")[0].textContent;
+        const flightDestination = flight.getElementsByTagName("destination")[0].textContent;
+        const flightDate = flight.getElementsByTagName("departure-date")[0].textContent;
+        const arrivalDate = flight.getElementsByTagName("arrival-date")[0].textContent;
+        const departureTime = flight.getElementsByTagName("departure-time")[0].textContent;
+        const arrivalTime = flight.getElementsByTagName("arrival-time")[0].textContent;
+        const availableSeats = flight.getElementsByTagName("available-seats")[0].textContent;
+        const price = flight.getElementsByTagName("price")[0].textContent;
         const adults = Number(document.getElementById('adults').value);
         const children = Number(document.getElementById('children').value)
         const infants = Number(document.getElementById('infants').value);
@@ -223,35 +279,32 @@ $last_name = $_SESSION['last_name'];
     }
 
     function addToCart(flight, adults, children, infants, totalPassengers, returning) {
-        // Assuming flight is an object containing the flight details from the server
+        const flightDetails = flight.textContent.trim().split("\n");
         const flightObject = {
-            "flight-id": flight.flight_id,  // Assuming flight_id is a field in your response
-            "origin": flight.origin,
-            "destination": flight.destination,
-            "departure-date": flight.departure_date,  // Assuming departure_date is a field
-            "departure-time": flight.departure_time,  // Assuming departure_time is a field
-            "arrival-date": flight.arrival_date,  // Assuming arrival_date is a field
-            "arrival-time": flight.arrival_time,  // Assuming arrival_time is a field
-            "available-seats": flight.available_seats,  // Assuming available_seats is a field
-            "price": flight.price,  // Assuming price is a field
+            "flight-id": flightDetails[0].trim(),
+            "origin": flightDetails[1].trim(),
+            "destination": flightDetails[2].trim(),
+            "departure-date": flightDetails[3].trim(),
+            "departure-time": flightDetails[4].trim(),
+            "arrival-date": flightDetails[5].trim(),
+            "arrival-time": flightDetails[6].trim(),
+            "available-seats": flightDetails[7].trim(),
+            "price": flightDetails[8].trim(),
             "adults": adults,
             "children": children,
             "infants": infants,
             "total-passengers": totalPassengers
         };
         
-        // Store the flight in sessionStorage based on whether it's a return flight or not
         if (returning) {
             sessionStorage.setItem("selectedReturnFlight", JSON.stringify(flightObject));
         } else {
             sessionStorage.setItem("selectedFlight", JSON.stringify(flightObject));
         }
 
-        // Notify the user and log the flight object for debugging
         alert(`${flightObject["flight-id"]} has been added to the cart.`);
         console.log(flightObject);
     }
-
 
 
 

@@ -24,7 +24,7 @@ $guests = $payload['guests'];
 // Check if the hotel exists, and insert if it doesn't
 $sql = "SELECT hotel_id FROM hotels WHERE hotel_id = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $hotel['hotel-id']);
+$stmt->bind_param("s", $hotel['hotel_id']);
 $stmt->execute();
 $result = $stmt->get_result();
 
@@ -34,10 +34,10 @@ if ($result->num_rows === 0) {
     $stmt_insert_hotel = $conn->prepare($sql_insert_hotel);
     $stmt_insert_hotel->bind_param(
         "sssi",
-        $hotel['hotel-id'],
-        $hotel['hotel-name'],
+        $hotel['hotel_id'],
+        $hotel['hotel_name'],
         $hotel['city'],
-        $hotel['price-per-night']
+        $hotel['price_per_night']
     );
 
     if (!$stmt_insert_hotel->execute()) {
@@ -51,7 +51,7 @@ if ($result->num_rows === 0) {
 $checkIn = new DateTime($hotel['checkIn']);
 $checkOut = new DateTime($hotel['checkOut']);
 $nights = $checkOut->diff($checkIn)->days;
-$totalPrice = $hotel['rooms'] * $hotel['price-per-night'] * $nights;
+$totalPrice = $hotel['rooms'] * $hotel['price_per_night'] * $nights;
 
 // Insert the hotel booking
 $sql_insert_booking = "INSERT INTO hotel_booking (hotel_booking_id, hotel_id, check_in, check_out, rooms, price_per_night, total_price) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -59,14 +59,14 @@ $stmt_insert_booking = $conn->prepare($sql_insert_booking);
 $stmt_insert_booking->bind_param(
     "ssssiid",
     $bookingID,
-    $hotel['hotel-id'],
+    $hotel['hotel_id'],
     $hotel['checkIn'],
     $hotel['checkOut'],
     $hotel['rooms'],
-    $hotel['price-per-night'],
+    $hotel['price_per_night'],
     $totalPrice
 );
-
+error_log($hotel['hotel_id']);
 if (!$stmt_insert_booking->execute()) {
     echo json_encode(['error' => 'Failed to insert booking']);
     http_response_code(500);
