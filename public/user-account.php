@@ -168,38 +168,45 @@ if ($ssn) {
                 <button type="submit">Search Flight</button>
             </form>
 
-            <?php if ($flightBooking): ?>
-                <h4>Flight Booking Details</h4>
-                <p>Flight ID: <?php echo $flightBooking['flight_booking_id']; ?></p>
-                <p>Flight Price: $<?php echo $flightBooking['total_price']; ?></p>
-            <?php endif; ?>
-
             <form method="POST">
                 <label for="hotel_booking_id">Enter Hotel Booking ID:</label>
                 <input type="text" id="hotel_booking_id" name="hotel_booking_id" value="<?php echo $hotelBookingId; ?>">
                 <button type="submit">Search Hotel</button>
             </form>
 
-            <?php if ($hotelBooking): ?>
-                <h4>Hotel Booking Details</h4>
-                <p>Hotel ID: <?php echo $hotelBooking['hotel_booking_id']; ?></p>
-                <p>Total Price: $<?php echo $hotelBooking['total_price']; ?></p>
-            <?php endif; ?>
-
-            <!-- Display passengers for flight -->
-            <?php if ($flightBookingId && count($passengers) > 0): ?>
-                <h4>Passengers for Flight</h4>
-                <?php foreach ($passengers as $passenger): ?>
-                    <p>Name: <?php echo $passenger['first_name'] . ' ' . $passenger['last_name']; ?></p>
-                    <p>SSN: <?php echo $passenger['ssn']; ?></p>
-                <?php endforeach; ?>
-            <?php endif; ?>
-
-            <!-- Form to retrieve September bookings -->
             <form method="POST">
                 <button type="submit" name="september_bookings">Retrieve Bookings for September 2024</button>
             </form>
 
+            <form method="POST">
+                <label for="ssn">Enter SSN to search flights:</label>
+                <input type="text" id="ssn" name="ssn" value="<?php echo $ssn; ?>">
+                <button type="submit">Search Flights by SSN</button>
+            </form>
+
+            <br><br>
+
+            <!-- Display Flight Booking Details -->
+            <?php if ($flightBooking): ?>
+                <h4>Flight Booking Details</h4>
+                <p>Booking ID: <?php echo $flightBooking['flight_booking_id']; ?></p>
+                <p>Flight ID: <?php echo $flightBooking['flight_id']; ?></p>
+                <p>Flight Price: $<?php echo $flightBooking['total_price']; ?></p>
+            <?php endif; ?>
+
+            <!-- Display Hotel Booking Details -->
+            <?php if ($hotelBooking): ?>
+                <h4>Hotel Booking Details</h4>
+                <p>Booking ID: <?php echo $hotelBooking['hotel_booking_id']; ?></p>
+                <p>Hotel ID: <?php echo $hotelBooking['hotel_id']; ?></p>
+                <p>Check In: <?php echo $hotelBooking['check_in']; ?></p>
+                <p>Check Out: <?php echo $hotelBooking['check_out']; ?></p>
+                <p>Rooms: <?php echo $hotelBooking['rooms']; ?></p>
+                <p>Price Per Night: <?php echo $hotelBooking['price_per_night']; ?></p>
+                <p>Total Price: $<?php echo $hotelBooking['total_price']; ?></p>
+            <?php endif; ?>
+
+            <!-- Display September Bookings -->
             <?php if ($septemberBookings && count($septemberFlightHotel) > 0): ?>
                 <h4>Bookings for September 2024</h4>
                 <?php foreach ($septemberFlightHotel as $booking): ?>
@@ -209,21 +216,18 @@ if ($ssn) {
                 <?php endforeach; ?>
             <?php endif; ?>
 
-            <!-- Form to search flights by SSN -->
-            <form method="POST">
-                <label for="ssn">Enter SSN to search flights:</label>
-                <input type="text" id="ssn" name="ssn" value="<?php echo $ssn; ?>">
-                <button type="submit">Search Flights by SSN</button>
-            </form>
-
+            <!-- Display Flights by SSN -->
             <?php if (count($flightsBySSN) > 0): ?>
                 <h4>Flights for SSN: <?php echo $ssn; ?></h4>
                 <?php foreach ($flightsBySSN as $flight): ?>
-                    <p>Flight ID: <?php echo $flight['flight_booking_id']; ?></p>
-                    <p>Price: $<?php echo $flight['total_price']; ?></p>
+                    <p>Booking ID: <?php echo $flight['flight_booking_id']; ?></p>
+                    <p>Ticket ID: <?php echo $flight['ticket_id']; ?></p>
+                    <p>Flight ID: <?php echo $flight['flight_id']; ?></p>
+                    <p>Price: $<?php echo $flight['price']; ?></p><br>
                 <?php endforeach; ?>
             <?php endif; ?>
         </main>
+
     </div>
     
     <footer>
